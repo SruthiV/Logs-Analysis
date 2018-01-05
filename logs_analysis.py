@@ -22,6 +22,7 @@ query3 = """SELECT errorlogs.date, round(100.0*errorcount/logcount,2) as percent
             WHERE logs.date = errorlogs.date
             AND errorcount > logcount/100;"""
 
+
 def connect(query):
     # Connect to database
     db = psycopg2.connect(database=DBNAME)
@@ -37,12 +38,14 @@ def connect(query):
 
 # Question 1. What are the most popular three articles of all time?
 
+
 def top_three_articles(query):
     results = connect(query)
     print('\n Displaying the most popular articles of all time:\n')
     for i in results:
         print('\t' + str(i[0]) + ' - ' + str(i[1]) + ' views')
         print(" ")
+
 
 # Question 2. Who are the most popular article authors of all time?
 
@@ -52,6 +55,7 @@ def top_authors(query):
     for i in results:
         print('\t' + str(i[0]) + ' - ' + str(i[1]) + ' views')
         print(" ")
+
 
 # Question 3. On which days did more than 1% of requests lead to errors?
 
@@ -63,9 +67,8 @@ def error_percentage(query):
         print(" ")
 
 if __name__ == '__main__':
-# Print results
+	# Print results
 
-	top_three_articles(query1)
-	top_authors(query2)
-	error_percentage(query3)
-
+    top_three_articles(query1)
+    top_authors(query2)
+    error_percentage(query3)
