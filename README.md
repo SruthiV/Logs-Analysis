@@ -29,7 +29,7 @@ Use `vagrant up` to bring the virtual machine online and `vagrant ssh` to login.
 CREATE VIEW article_authors AS
 SELECT title, name
 FROM articles, authors
-WHERE article.authors = authors.id;
+WHERE articles.author = authors.id;
 ```
 ```sql 
 CREATE VIEW article_views AS
