@@ -19,7 +19,7 @@ For this project, my task was to create a reporting tool that prints out reports
 
 5. Create the Views given below. Then exit `psql`.
 
-6. Now execute the Python file - `python Logs_Analysis.py`.
+6. Now execute the Python file - `python logs_analysis.py`.
 
 
 #### CREATE THE FOLLOWING VIEWS FOR QUESTION 2 AND QUESTION 3:
@@ -28,9 +28,9 @@ For this project, my task was to create a reporting tool that prints out reports
     CREATE VIEW article_authors AS
     SELECT title, name
     FROM articles, authors
-    WHERE articles.authors = authors,id;
+    WHERE article.authors = authors.id;
 ----
-    CREATE VIEW articles_views AS
+    CREATE VIEW article_views AS
     SELECT title, count(log.id) as views
     FROM articles, log
     WHERE log.path = CONCAT('/article/', articles.slug)
