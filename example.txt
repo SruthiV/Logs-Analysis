@@ -1,4 +1,4 @@
- Displaying the most popular articles of all time:
+Displaying the most popular articles of all time:
 
         Candidate is jerk, alleges rival - 338647 views
 
@@ -20,4 +20,4 @@
 
  The days when more than 1% of requests lead to error:
 
-        17-JUL-2016 - 2.2626862468027260 % errors
+        17-JUL-2016 - 2.26 % errors
