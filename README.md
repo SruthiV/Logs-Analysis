@@ -52,7 +52,7 @@ CREATE VIEW errorlogs AS
 SELECT to_char(time,'DD-MON-YYYY') as Date, count(*) as ErrorCount
 FROM log
 WHERE STATUS = '404 NOT FOUND'
-GROUP BY Date
+GROUP BY Date;
 ```
 
 
